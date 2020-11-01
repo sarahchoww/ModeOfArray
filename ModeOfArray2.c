@@ -82,6 +82,8 @@ double modeOfArray(int arr[], int n)
 		}
 	}
 
+	free(vals);
+
 	return (maxValIndex);
 
 

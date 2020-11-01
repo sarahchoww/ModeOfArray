@@ -3,6 +3,7 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h>
 
 double modeOfArray(int arr[], int n)
 {
@@ -15,7 +16,7 @@ double modeOfArray(int arr[], int n)
     for (int i = 0; i < n; i++)
     {
 	    vals[i] = (int*)malloc(2 * sizeof(int)); // Each array element has memory allocated for two integers, creates a column of integers
-
+		assert(vals[i] != NULL);
     }
 
 	int counter = 0; // Counter for the array vals

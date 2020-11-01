@@ -3,12 +3,15 @@
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <assert.h>
 
 double modeOfArray(int arr[], int n)
 {
 	int moreThanOnce = 1; // False, boolean value
 
     int *vals = (int*)malloc(n * 2 * sizeof(int)); // Allocate memory for the entire array, number of elements * 2 rows
+	assert(vals != NULL);
+
     /* To access the array values, *(arrayName + (columnNumber * numberOfRows) + index in column)
 
     Example: 
